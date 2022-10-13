@@ -1,0 +1,11 @@
+
+{% load static %}
+
+{% block content%}
+      <li>{{post.title}}</li>
+      <li>{{post.author.first_name}}</li>
+      <li>{{post.created_at}}</li>
+   
+  
+    <img src = "{{post.featured_image.url}}">
+{% endblock content%}

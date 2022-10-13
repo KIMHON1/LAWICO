@@ -1,0 +1,711 @@
+{% comment %} <!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lawico Ltd ||  Company</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesome-free-5.12.1-web/css/all.min.css' %}"
+    />
+    <!-- styles css -->
+    <link rel="stylesheet" href="{% static 'styles/css/styles.css' %}" />
+</head>
+<body>
+    
+
+   
+    {% block content%}
+
+  
+
+     
+
+    
+    {% for post in post_list %}
+    
+    <ul>
+    
+    <a href = "{% url 'blog:post-detail' post.id %}"> <li>{{post.title}}
+     {{post.author.first_name}}
+     {{post.created_at}}
+    </li>
+        <a>
+    </ul>    
+    {% endfor %}
+     
+    {% endblock content%}
+
+  
+
+
+   
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lawico Ltd ||  Company</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="{% static './fontawesome-free-5.12.1-web/css/all.min.css'%}"
+    />
+    <!-- styles css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+
+
+
+
+
+
+
+
+
+  <body>
+  
+
+
+
+
+    {% include 'blog/navbar.html'%}
+
+
+
+
+    <!-- about section -->
+    <section class="section" id="about">
+      <!-- section title -->
+      <div class="section-title">
+        <h2>about <span> us</span></h2>
+      </div>
+      <!-- section  end of title -->
+      <div class="section-center about-center">
+        <!-- about img wrapper -->
+        <article class="about-img">
+          <img src="./images/about.jpg" class="about-photo" alt="about lawico campany">
+        </article>
+        <!-- about info -->
+        <article class="about-info">
+          <h3>explore LAWICO LTD </h3>
+          <p>
+            Land & water intervations company(LAWICO)
+          </p>
+          <p>
+            Lawico is a consulting firm operating in Environmental , Agricultural, Water Management, Educational and Climate
+            sectors.
+          </p>
+          <a href="#post" class="btn">read more</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- end of about section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- services -->
+    <section class="section services" id="services">
+
+
+      <!-- section title -->
+      <div class="section-title">
+        <h2>our  <span> services</span></h2>
+      </div>
+      <!-- section  end of title -->
+      <div class="section-center services-center">
+        <!-- single service -->
+        <article class="service">
+          <span class="service-icon">
+            <i class="fas fa-tree fa-fw"></i>
+          </span>
+          <div class="service-info">
+            <h4 class="service-title">Environment
+
+            </h4>
+            <p class="service-text">Environment protection</p>
+            <p class="service-text">Wast management</p>
+            <p class="service-text">Climete change adaptation and mitigation</p>
+          </div>
+
+        </article>
+        <!-- end of  single 
+          service -->
+
+          <!-- single service -->
+          <article class="service">
+            <span class="service-icon">
+              <i class="fas fa-seedling fa-fw"></i>
+            </span>
+            <div class="service-info">
+              <h4 class="service-title">Agriculture
+          
+              </h4>
+              <p class="service-text">Crop production and Post-harvest technology</p>
+              <p class="service-text">Land use and  management</p>
+              <p class="service-text">Animal health and production</p>
+              <p class="service-text">Conservation and forestry</p>
+            </div>
+          
+          </article>
+          <!-- end of  single 
+                    service -->
+          <!-- single service -->
+          <article class="service">
+            <span class="service-icon">
+              <i class="fas fa-apple-alt fa-fw"></i>
+            </span>
+            <div class="service-info">
+              <h4 class="service-title">Horticulture
+          
+              </h4>
+             
+              <p class="service-text">Fruits</p>
+              <p class="service-text">vegetables</p>
+            </div>
+          
+          </article>
+          <!-- end of  single service -->
+
+
+          <!-- single service -->
+          <article class="service">
+            <span class="service-icon">
+              <i class="fas fa-tree fa-fw"></i>
+            </span>
+            <div class="service-info">
+              <h4 class="service-title">forestry and nature
+          
+              </h4>
+           
+              <p class="service-text">Nurseries development</p>
+              <p class="service-text">Tree supply and plantation</p>
+              
+            </div>
+          
+          </article>
+          <!-- end of  single service -->
+
+
+          <!-- single service -->
+          <article class="service">
+            <span class="service-icon">
+              <i class="fas fa-tree fa-fw"></i>
+            </span>
+            <div class="service-info">
+              <h4 class="service-title"> Water
+          
+              </h4>
+          
+              <p class="service-text">Water resources management </p>
+              <p class="service-text">Water Supply and Sanitation</p>
+              <p class="service-text">Rainwater harvesting</p>
+
+            </div>
+          
+          </article>
+          <!-- end of  single service -->
+
+
+            <!-- single service -->
+            <article class="service">
+              <span class="service-icon">
+                <i class="fas fa-horse fa-fw"></i>
+              </span>
+              <div class="service-info">
+                <h4 class="service-title"> Veterinary activities
+            
+                </h4>            
+              </div>
+            
+            </article>
+            <!-- end of  single service -->
+
+            <!-- single service -->
+            <article class="service">
+              <span class="service-icon">
+                <i class="fas fa-tree fa-fw"></i>
+              </span>
+              <div class="service-info">
+                <h4 class="service-title"> Research and Capacity building
+            
+                </h4>
+                <p class="service-text">Training in different areas</p>
+              </div>
+            
+            </article>
+            <!-- end of  single service -->
+
+            <!-- single service -->
+            <article class="service">
+              <span class="service-icon">
+                <i class="fas fa-truck fa-fw"></i>
+              </span>
+              <div class="service-info">
+                <h4 class="service-title"> 
+                  supply/delively
+                </h4>
+              </div>
+            
+            </article>
+            <!-- end of  single service -->
+
+
+            <!-- single service -->
+            <article class="service">
+              <span class="service-icon">
+                <i class="fas fa-tree fa-fw"></i>
+              </span>
+              <div class="service-info">
+                <h4 class="service-title"> 
+                  works
+                </h4>
+              </div>
+            
+            </article>
+            <!-- end of  single service -->
+
+
+            <!-- single service -->
+            <article class="service">
+              <span class="service-icon">
+                <i class="fas fa-tree fa-fw"></i>
+              </span>
+              <div class="service-info">
+                <h4 class="service-title">
+                  consultancy
+                </h4>
+              </div>
+            
+            </article>
+            <!-- end of  single service -->
+
+          
+      </div>
+    </section>
+
+
+    <!--end services -->
+
+
+
+
+
+
+
+
+  
+    <ul>
+    
+    <a href = ""> <li>
+     {{post.author.first_name}}
+    
+    </li>
+        <a>
+    </ul>    
+   
+
+
+
+    
+
+    <!-- featured post -->
+    <section class="section" id="post">
+      <!-- section title -->
+      <div class="section-title">
+        <h2>featured <span> post</span></h2>
+      </div>
+      <!-- section  end of title -->
+
+      <!-- featured -center  -->
+
+      <div class="section-center featured-center">
+        {% for post in post_list %}
+        <!-- single post -->
+        <article class="post-card">
+          <div class="post-img-container">
+
+            <img src="./images/water.jpg" class="post-img" alt="water image">
+            <p class="post-date">
+               {{post.created_at}}
+            </p>
+          </div>
+
+          <!-- post info -->
+
+          <div class="post-info">
+            <h4>{{post.title}}</h4>
+
+            <p>{{post.content}}</p>
+          </div>
+
+          <a href="{% url 'blog:post-detail' post.id %}" class="btn">read more</a>
+
+        </article>
+
+        <!-- end of single post -->
+
+ {% endfor %}
+       
+        
+
+       
+        
+        <div class="post-btn">
+          <a href="#post" class="btn">
+          
+          all posts</a>
+        </div>
+
+        
+
+
+      </div>
+
+    </section>
+
+    <!-- end of featured post -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- clients -->
+    <section class="section clients" id="clients">
+
+
+      <!-- section title -->
+      <div class="section-title">
+        <h2>our <span> clients</span></h2>
+      </div>
+      <!-- section  end of title -->
+      <div class="section-center clients-center">
+
+      <!-- singele client -->
+
+      <article class="client">
+        <div class="client-info">
+            <h4 class="client-title">public sector
+            </h4>
+        </div>
+      </article>
+      <!-- end of single client -->
+
+        <!-- singele client -->
+        
+        <article class="client">
+          <div class="client-info">
+            <h4 class="client-title">private sector
+        
+            </h4>
+        
+            <p class="client-text">
+              Large and medium enterprises
+            </p>
+        
+          </div>
+        </article>
+        <!-- end of single client -->
+
+
+          <!-- singele client -->
+          
+          <article class="client">
+            <div class="client-info">
+              <h4 class="client-title">Environment
+          
+              </h4>
+          
+              <p class="client-text">Environment protection</p>
+          
+            </div>
+          </article>
+          <!-- end of single client -->
+
+
+            <!-- singele client -->
+            
+            <article class="client">
+              <div class="client-info">
+                <h4 class="client-title"> civil society
+            
+                </h4>
+              </div>
+            </article>
+            <!-- end of single client -->
+
+
+
+              <!-- singele client -->
+              
+              <article class="client">
+                <div class="client-info">
+                  <h4 class="client-title">farmes
+              
+                  </h4>
+              
+                  <p class="client-text"> Individuals and cooperatives</p>
+              
+                </div>
+              </article>
+              <!-- end of single client -->
+
+
+                <!-- singele client -->
+                
+                <article class="client">
+                  <div class="client-info">
+                    <h4 class="client-title">TVET schools
+                
+                    </h4>
+                
+                  
+                
+                  </div>
+                </article>
+                <!-- end of single client -->
+
+
+
+                  <!-- singele client -->
+                  
+                  <article class="client">
+                    <div class="client-info">
+                      <h4 class="client-title">Households
+                  
+                      </h4>
+                  
+                    
+                  </article>
+                  <!-- end of single client -->
+
+        </div>
+
+    </section>
+
+<!-- end of our client -->
+
+
+    <!-- contact -->
+
+    <section class="section contacts" id="contacts">
+
+
+      <!-- section title -->
+      <div class="section-title">
+        <h2>contact <span> info</span></h2>
+      </div>
+      <!-- section  end of title -->
+      <div class="section-center  contacts-center">
+
+        <!-- single contact -->
+        <article class="contact">
+          <span class="contact-icon">
+            <i class="fas fa-envelop-o fa-fw"></i>
+          </span>
+          <div class="contact-info">
+            <h4 class="contact-title">location:
+        
+            </h4>
+            <p class="contact-text">
+              Muhoza Sector ,Musanze Distric,
+              NorthernProvince,Rwanda.
+            </p>
+        
+          </div>
+        
+        </article>
+        <!-- end of  single 
+                                  contact -->
+
+        <!-- single contact -->
+        <article class="contact">
+          <span class="contact-icon">
+            <i class="fas fa-anvelop fa-fw"></i>
+          </span>
+          <div class="contact-info">
+            <h4 class="contact-title">Email:
+        
+            </h4>
+            <p class="contact-text">lawicoltd@gmail.com</p>
+        
+          </div>
+        
+        </article>
+        <!-- end of  single 
+                          contact -->
+
+
+        <!-- single contact -->
+        <article class="contact">
+          <span class="contact-icon">
+            <i class="fas fa-phone fa-fw"></i>
+          </span>
+          <div class="contact-info">
+            <h4 class="contact-title">tel:
+        
+            </h4>
+            <p class="contact-text">+250788544779</p>
+           
+          </div>
+        
+        </article>
+        <!-- end of  single 
+                  contact -->
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+    <!-- end of contact -->
+
+
+
+
+
+    <!-- gallery  -->
+
+    <section id="gallery">
+      <div class="gallery-center">
+        <!-- single item -->
+
+        <article class="gallery-img-container">
+          <img src="./images/big-lil uz.png" class="gallery-img" alt="">
+          <a href="#" class="gallery-icon">
+            <i class="fas fa-search"></i>
+          </a>
+        </article>
+        <!-- end of single item -->
+          <!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/birt.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/black.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/CROME.jpg" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/dan.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/perso.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/fathe.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/dud.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item --><!-- single item -->
+          
+          <article class="gallery-img-container">
+            <img src="./images/denzal-mark.png" class="gallery-img" alt="">
+            <a href="#" class="gallery-icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </article>
+          <!-- end of single item -->
+
+      </div>
+
+    </section>
+
+
+    <!-- end of gallery  -->
+
+
+    {% include 'blog/footer.html'  %}
+
+    
+
+
+
+    <!-- js -->
+    <script src="{% static './js/app.js'%}"></script>
+  </body>
+
+
+</html>
